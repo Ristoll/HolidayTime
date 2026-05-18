@@ -24,6 +24,20 @@ h1, h2, h3 {
 
 h3 {
     color: #202846;
+    font-size: 48px;
+}
+
+button {
+    height: 68px;
+    width: 245px;
+    border: transparent;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0px;
 }
 
 header, .dark {
@@ -47,6 +61,7 @@ main {
     flex-direction: column;
     gap: 50px;
     padding: 0px 11vw;
+    margin-top: 50px;
 }
 
 footer {
@@ -60,8 +75,11 @@ footer {
 }
 
 .page-title {
+    display: flex;
     background-color: #C6C6DC;
     height: 140px;
+    align-items: center;
+    padding-left: 15%;
 }
 
 /*Header*/
@@ -74,7 +92,6 @@ header{
     justify-content: space-between;
     position: sticky;
     top: 0px;
-    margin-bottom: 50px;
 }
 
 .menu-list{
@@ -119,7 +136,8 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color:#fff
+    color:#fff;
+    text-align: center;
 }
 
 /*Main-page second-block*/
@@ -162,16 +180,6 @@ header{
     position: absolute;
     top: -20%;
     right: 0px;
-    height: 68px;
-    width: 245px;
-    border: transparent;
-    border-radius: 50px;
-    color: #fff;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    padding: 0px;
 }
 
 /*Main-page third-block*/
@@ -234,3 +242,27 @@ header{
 
 /*Сontacts*/
 
+.contacts-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 11vw;
+    column-gap:15%;
+    row-gap: 52px;
+}
+
+.contact {
+    width: fit-content;
+}
+
+.contact .info {
+    text-align: center;
+}
+
+.map iframe {
+    border-radius: 40px;
+    height: 335px;
+    width: 30vw;
+}
+
+
+/**/

@@ -99,11 +99,11 @@ function loadSavedTitle() {
     const div = document.createElement("div");
     div.classList.add("page-title");
 
-    const h1 = document.createElement("h3");
-    h1.textContent = savedTitle;
-    h1.style.fontStyle = "italic";
-
-    div.appendChild(h1);
+    const h3 = document.createElement("h3");
+    h3.textContent = savedTitle;
+    h3.style.fontStyle = "italic";
+    
+    div.appendChild(h3);
     container.appendChild(div);
 }
 
