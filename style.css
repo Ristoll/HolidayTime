@@ -18,7 +18,7 @@ a {
     color: #fff;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
     margin: 0px;
 }
 
@@ -285,7 +285,34 @@ header{
     font-size: 30px;
 }
 
-.text-block p {
-    margin: 0px;
+/*Personal-page*/
+
+.personal-block {
+    background-color: #BDBDC6;
+    display: flex;
+    flex-direction: row;
+    height: 500px;
 }
 
+.personal-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    padding: 0px 140px;
+}
+
+.personal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    justify-content: center;
+    color: #353C57;
+}
