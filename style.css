@@ -265,4 +265,27 @@ header{
 }
 
 
-/**/
+/*About-us*/
+
+#about-us {
+    background-image: url("resources/about-us-view.svg");
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+    height: 227px;
+}
+
+.text-block {
+    background-color: #CBCBCB;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px 74px;
+    height: 380px;
+    font-size: 30px;
+}
+
+.text-block p {
+    margin: 0px;
+}
+
