@@ -1,25 +1,31 @@
-const { createElement } = require("react");
+document.addEventListener("DOMContentLoaded", init);
 
-function fetchHeader() {
-    fetch("header.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-        });
+async function init() {
+    await loadHeader();
+    loadSavedTitle();
+    loadFooter();
+    loadCards(cards_data);
 }
 
-function fetchFooter() {
-    const container = document.getElementById("footer");
+async function loadHeader() {
+    const container = document.getElementById("header");
     if (!container) return;
 
-    const footer = document.createElement("footer");
+    const response = await fetch("header.html");
+    const html = await response.text();
 
-    const p = document.createElement("p");
-    p.textContent = "© 2021 HolidayTime. All rights reserved.";
-    p.style.fontStyle = "italic";
+    container.innerHTML = html;
     
-    footer.appendChild(p);
-    container.appendChild(footer);
+    console.log("HEADER LOADED:", document.querySelector(".menu-list"));
+}
+
+function loadFooter() {
+    const footer = document.getElementById("footer");
+    if (!footer) return;
+    footer.classList.add("dark");
+    footer.innerHTML = `
+        <p style="font-size:36px;"><i>© 2021 HolidayTime. All rights reserved.</i></p>
+    `;
 }
 
 const cards_data = [
@@ -57,21 +63,21 @@ function createCard(card) {
         </div>
 
         <img src="resources/star-icon.svg" alt="star">
-        <button><sup>Детальніше</sup></button>
+        <button class="dark"><sup>Детальніше</sup></button>
     `;
 
     return cardEl;
 }
 
-function clearContainer(container) {
+async function clearContainer(container) {
     container.innerHTML = "";
 }
 
-function showCards(cards) {
+async function loadCards(cards) {
     const container = document.querySelector(".booking-cards-container");
     if (!container) return;
 
-    clearContainer(container);
+    await clearContainer(container);
 
     cards.forEach(card => {
         const cardEl = createCard(card);
@@ -79,26 +85,29 @@ function showCards(cards) {
     });
 }
 
-function fetchTitle(text) {
+function setPageTitle(title) {
+    localStorage.setItem("pageTitle", title);
+}
+
+function loadSavedTitle() {
+    const savedTitle = localStorage.getItem("pageTitle");
+    if (!savedTitle) return;
+
     const container = document.getElementById("page-title");
     if (!container) return;
 
     const div = document.createElement("div");
     div.classList.add("page-title");
 
-    const h1 = document.createElement("h1");
-    h1.textContent = text;
+    const h1 = document.createElement("h3");
+    h1.textContent = savedTitle;
     h1.style.fontStyle = "italic";
 
     div.appendChild(h1);
     container.appendChild(div);
 }
 
-function goToHouse() {
-    fetchTitle('Бронювання будиночка в Карпатах');
+async function goToHouse() {
+    loadTitle('Бронювання будиночка в Карпатах');
     window.location.href = 'house.html';
 }
-
-showCards(cards_data);
-fetchHeader();
-fetchFooter();

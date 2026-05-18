@@ -1,22 +1,19 @@
-<div class="head-block">
-    <img src="resources/logo.svg" alt="logo">
+<img src="resources/logo.svg" alt="logo" style="margin-left: 183px;">
 
-    <div class="list">
-        <a href="main-page.html">ГОЛОВНА</a>
-        <a href="about-us-page.html" onclick="fetchTitle('Про нас')">ПРО НАС</a>
-        <a href="booking-page.html" onclick="fetchTitle('Забронювати будиночок')">ЗАБРОНЮВАТИ</a>
-        <a href="contacts-page.html" onclick="fetchTitle('Контакти')">КОНТАКТИ</a>
-        <a href="personal-page.html" onclick="fetchTitle('Особистий кабінет')">ОСОБИСТИЙ КАБІНЕТ</a>
-    </div>
+<nav class="menu-list">
+    <a href="main-page.html">ГОЛОВНА</a>
+    <a href="about-us-page.html" onclick="setPageTitle('Про нас')">ПРО НАС</a>
+    <a href="booking-page.html" onclick="setPageTitle('Забронювати будиночок')">ЗАБРОНЮВАТИ</a>
+    <a href="contacts-page.html" onclick="setPageTitle('Контакти')">КОНТАКТИ</a>
+    <a href="personal-page.html" onclick="setPageTitle('Особистий кабінет')">ОСОБИСТИЙ КАБІНЕТ</a>
 
-    <div class="localisation-block">
-        <img src="resources/globe.svg" alt="globe">
-
-        <select id="language" name="language">
-            <option value="ukrainian" selected>UA</option>
-            <option value="french">FR</option>
-            <option value="english">EN</option>
+    <div class="localisation-block dark">
+        <img src="resources/globe.svg" alt="globe" style="margin: 10px;">
+            
+        <select class="dark" id="language-select" name="language">
+            <option class="dark" value="ukrainian" selected>UA</option>
+            <option class="dark" value="french">FR</option>
+            <option class="dark" value="english">EN</option>
         </select>
     </div>
-</div>
-<script src="script.js"></script>
+</nav>
