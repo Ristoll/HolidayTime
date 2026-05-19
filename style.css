@@ -18,13 +18,19 @@ a {
     color: #fff;
 }
 
-h1, h2, h3, p {
+h1, h2, h3 {
     margin: 0px;
 }
 
 h3 {
     color: #202846;
     font-size: 48px;
+}
+
+hr {
+  border: none;
+  border-top: 3px solid #fff;
+  margin: 20px 0;
 }
 
 button {
@@ -117,10 +123,12 @@ header{
 }
 
 #language-select{
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 40px;
     border: transparent;
-    color: #fff;
+    color: #fff;    
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /*Main-page first-block*/
@@ -169,11 +177,11 @@ header{
     position: absolute;
     bottom: 0px;
     padding: 20px 0px 26px;
-    font: PT Sans;
 }
 
 .side-info-block p {
     font-size: 24px;
+    margin: 25px 0px 25px 25px;
 }
 
 #side-info-btn {
@@ -192,6 +200,7 @@ header{
     height: 412px;
     padding: 0px 3.6vw;
     gap: 18px;
+    font-size: 26px;
 }
 
 .info-block {
@@ -202,6 +211,7 @@ header{
     height: 349px;
     text-align: center;
     width: 50%;
+    padding: 0px 60px;
 }
 
 /*Feedback*/
@@ -226,6 +236,7 @@ header{
     font-size: 20px;
     color: gray;
     border-color: gray;
+    box-shadow:none;
 }
 
 .feedback-form button {
@@ -234,6 +245,7 @@ header{
     background-color: #444765;
     color: #fff;
     font-size: 36px;
+    border-radius: 0px;
 }
 
 .feedback-form label {
@@ -315,4 +327,67 @@ header{
     font-size: 36px;
     justify-content: center;
     color: #353C57;
+    gap:0px;
+}
+.personal-info p {
+    margin: 0px;
+}
+
+/*Booking*/
+
+#location-select {
+    height: 73px;
+    background-color: #E8E8E8;
+    color: rgba(0, 0, 0, 61);
+    font-size: 28px;
+    text-align: center;
+}
+
+#location-select option {
+    background-color: #A3A5A9;
+    color: #292A31;
+    font-size: 32px;
+}
+
+.booking-cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    z-index: -1;
+}
+
+.booking-card {
+    display: flex;
+    flex-direction: row;
+    padding: 28px 17px 28px 103px;
+    position: relative;
+    color: #202846;
+}
+
+.booking-card img {
+    height: 244px;
+}
+
+.booking-info {
+    margin-right: 20px;
+    margin-left: 102px;
+}
+
+.info-section {
+    display: flex;
+    background-color: #D7D7DD;
+    text-align: center;
+    height: 184px;    
+    padding: 0px 9%;
+}
+
+#star {
+    height: 50px;
+    align-self: flex-start;
+}
+
+.booking-card button {
+    position: absolute;
+    bottom: 10px;
+    right: -48px;
 }

@@ -30,18 +30,22 @@ function loadFooter() {
 
 const cards_data = [
     {
+        img: "resources/bakota.svg",
         title: "Незвідана Бакота",
         description: "У Хмельницькій області розташований загублений край - Бакота. Мальовничий каньйон з давньою історією захоплює своїми просторами та незвичною атмосферою. Бджільництво, свіжий мед із польових трав, дотик до природи."
     },
     {
+        img: "resources/karpaty.svg",
         title:"Полонини Карпат",
         description: "Полонини Карпат, у селі Орів посеред гір розташувався затишний куточок для незабутніх вражень. Справжні українські гори, власноручне сироваріння на полонині, водоспади та вікові дерева чекають на Вас."
     },
     {
+        img: "resources/kyiv.svg",
         title: "Автентична Київщина",
         description: "Неподалік центра Києва розташувалось автентичне українське село на території однойменного села Пирогово. Дерев’яні млини, запашний хліб, приготовлений своїми руками, українські пісні та багато іншого чекає на вас уже зараз."
     },
     {
+        img: "resources/odessa.svg",
         title: "Нетипова Одещина",
         description: "В Одеській області знаходиться мальовниче містечко Вилкове. Його ще називають «українською Венецією». Вилкове - це містечко на воді, весь в каналах. Розташоване в місці, де зустрічаються річка Дунай і Чорне море. Люди пересуваються переважно човнами. Нетипове українське село не залишить Вас без вражень."
     }    
@@ -52,18 +56,18 @@ function createCard(card) {
     cardEl.classList.add("booking-card");
 
     cardEl.innerHTML = `
-        <div class="image-wrapper"></div>
+        <img src="${card.img}">
 
         <div class="booking-info">
-            <h2>${card.title}</h2>
+            <h2 style="font-size: 36px"><i>${card.title}</i></h2>
             <hr>
-            <div class="into-block">
-                <p>${card.description}</p>
+            <div class="info-section">
+                <p style="font-size: 22px; align-self: center;">${card.description}</p>
             </div>
         </div>
 
-        <img src="resources/star-icon.svg" alt="star">
-        <button class="dark"><sup>Детальніше</sup></button>
+        <img id="star" src="resources/star-icon.svg" alt="star">
+        <button class="dark">Детальніше</button>
     `;
 
     return cardEl;
@@ -74,7 +78,7 @@ async function clearContainer(container) {
 }
 
 async function loadCards(cards) {
-    const container = document.querySelector(".booking-cards-container");
+    const container = document.querySelector(".booking-cards-section");
     if (!container) return;
 
     await clearContainer(container);
