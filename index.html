@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3c02312c5f.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <title>HolidayTime</title>
     <link rel="icon" type="image/svg" sizes="64x64" href="resources/logo.svg">
 </head>
@@ -16,14 +15,14 @@
 
     <main>
         <section class="adv-block">
-            <h1 style="font-size: 75px;"><b>HolidayTime</b></h1>
-            <h2 style="font-size: 50px;"><b>Автентичний відпочинок серед українського колориту!</b></h2>
+            <h1 class="adv-title "><b>HolidayTime</b></h1>
+            <h2 class="adv-subtitle"><b>Автентичний відпочинок серед українського колориту!</b></h2>
         </section>
     
         <section class="second-block">
-            <img  id="right-arrow" src="resources/arrow-right.svg" alt="arrow-right" onclick="goToHouse()">
+            <img  id="right-arrow" src="resources/arrow-right.svg" alt="arrow-right" style="cursor: pointer;" onclick="goToHouse()">
             <div class="side-info-block">
-                <button id="side-info-btn" href="house.html" class="dark">Переглянути<i class="fa-solid fa-arrow-right fa-2xl"></i></button>
+                <button id="side-info-btn" class="dark"  onclick="goToHouse()">Переглянути<i class="fa-solid fa-arrow-right fa-2xl"></i></button>
                 <p><i>Полонини Карпат, у селі Орів посеред гір розташувався затишний куточок для незабутніх вражень. 
                     <br>Справжні українські гори, власноручне сироваріння на полонині, водоспади та вікові дерева чекають на Вас.</i></p>
                 <div class="dots">
@@ -39,7 +38,7 @@
         </section>
 
         <section class="third-block">
-            <img style="width: auto;" src="resources/couple.svg">
+            <img src="resources/couple.svg">
             <div class="info-block">
                 <p>Активний відпочинок у нетипових лоцаціях. Незаймана природа та місцевий колорит подарують Вам незабутні враження.</p>
             </div>
@@ -47,7 +46,7 @@
         <div class="feedback-form">
             <form>
                 <div class="input-part">
-                    <h3 style="font-size: 36px; margin-bottom: 15px; text-align: center;">Зворотній зв’язок</h3>
+                    <h3>Зворотній зв’язок</h3>
                     <label for="name">Ім'я</label>
                     <input type="text" id="name" placeholder="Введіть ім’я">
                     <label for="phone_num">Номер телефону</label>

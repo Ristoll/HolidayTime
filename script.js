@@ -59,10 +59,10 @@ function createCard(card) {
         <img src="${card.img}">
 
         <div class="booking-info">
-            <h2 style="font-size: 36px"><i>${card.title}</i></h2>
+            <h2><i>${card.title}</i></h2>
             <hr>
             <div class="info-section">
-                <p style="font-size: 22px; align-self: center;">${card.description}</p>
+                <p>${card.description}</p>
             </div>
         </div>
 
@@ -111,7 +111,8 @@ function loadSavedTitle() {
     container.appendChild(div);
 }
 
-async function goToHouse() {
-    loadTitle('Бронювання будиночка в Карпатах');
+function goToHouse() {
+    setPageTitle('Бронювання будиночка в Карпатах');
+    loadSavedTitle();
     window.location.href = 'house.html';
 }
