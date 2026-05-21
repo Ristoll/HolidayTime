@@ -65,8 +65,12 @@ function createCard(card) {
                 <p>${card.description}</p>
             </div>
         </div>
+        <label class="favorite">
+            <input type="checkbox">
 
-        <img id="star" src="resources/star-icon.svg" alt="star">
+            <img id="unactive-star" src="resources/unactive-star-icon.svg">
+            <img id="star" src="resources/active-star-icon.svg">
+        </label>
         <button class="dark">Детальніше</button>
     `;
 
